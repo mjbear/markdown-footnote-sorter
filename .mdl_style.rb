@@ -1,4 +1,6 @@
 all
+# ignore trailing punctuation in header
+exclude_rule 'MD026'
 # ignore requirement for newline at EOF
 # exclude_rule 'MD047'
 # set line length to 80 characters
