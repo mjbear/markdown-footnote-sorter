@@ -39,6 +39,18 @@ jobs:
           args: "format --check --diff"
           changed-files: "true"
 
+  mdlint_ruby:
+      - name: Run mdl-action on current dir
+        uses: bewuethr/mdl-action@v1
+        # with:
+        #   directory: .
+
+      - name: Run mdl-action on tests dir
+        uses: bewuethr/mdl-action@v1
+        with:
+          style-file: .mdl_style.rb
+          directory: tests
+
   test:
     runs-on: ubuntu-latest
     needs:
